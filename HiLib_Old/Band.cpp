@@ -1,0 +1,3 @@
+#include "Band.h"
+
+BOOST_CLASS_EXPORT_IMPLEMENT(CBand);

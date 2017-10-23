@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{82CFACB8-5C51-4923-B41A-A93E060E8170}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>XYZViewer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\HiLib;$(SolutionDir)..\..\libraries\boost;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\libraries\boost\stage\x86\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)\HiLib;$(SolutionDir)..\..\libraries\boost;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\libraries\boost\stage\x86\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <AdditionalOptions>/Zm500 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/Zm500 %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\HiLib\3DLineChart.h" />
+    <ClInclude Include="..\HiLib\3DLineChartResource.h" />
+    <ClInclude Include="..\HiLib\ApplicationProperty.h" />
+    <ClInclude Include="..\HiLib\atlpartial.h" />
+    <ClInclude Include="..\HiLib\Band.h" />
+    <ClInclude Include="..\HiLib\BindCell.h" />
+    <ClInclude Include="..\HiLib\BindColumn.h" />
+    <ClInclude Include="..\HiLib\BindPaintCell.h" />
+    <ClInclude Include="..\HiLib\BindPaintColumn.h" />
+    <ClInclude Include="..\HiLib\BindRow.h" />
+    <ClInclude Include="..\HiLib\BoolCell.h" />
+    <ClInclude Include="..\HiLib\ButtonState.h" />
+    <ClInclude Include="..\HiLib\CDataString.h" />
+    <ClInclude Include="..\HiLib\Cell.h" />
+    <ClInclude Include="..\HiLib\CellProperty.h" />
+    <ClInclude Include="..\HiLib\CellState.h" />
+    <ClInclude Include="..\HiLib\CellStringCommand.h" />
+    <ClInclude Include="..\HiLib\CExpandCollapseCell.h" />
+    <ClInclude Include="..\HiLib\Chart.h" />
+    <ClInclude Include="..\HiLib\ChartElements.h" />
+    <ClInclude Include="..\HiLib\ChartEventArgs.h" />
+    <ClInclude Include="..\HiLib\ChartProperty.h" />
+    <ClInclude Include="..\HiLib\ChartWnd.h" />
+    <ClInclude Include="..\HiLib\ChildColumnHeaderCell.h" />
+    <ClInclude Include="..\HiLib\ChildHeaderCell.h" />
+    <ClInclude Include="..\HiLib\ChildIndexColumn.h" />
+    <ClInclude Include="..\HiLib\ChildRowHeaderCell.h" />
+    <ClInclude Include="..\HiLib\ChildRowHeaderColumn.h" />
+    <ClInclude Include="..\HiLib\ColorCell.h" />
+    <ClInclude Include="..\HiLib\Column.h" />
+    <ClInclude Include="..\HiLib\CompareCell.h" />
+    <ClInclude Include="..\HiLib\CompareColumn.h" />
+    <ClInclude Include="..\HiLib\CompareColumnHeaderCell.h" />
+    <ClInclude Include="..\HiLib\ConsoleTimer.h" />
+    <ClInclude Include="..\HiLib\Cursorer.h" />
+    <ClInclude Include="..\HiLib\Dragger.h" />
+    <ClInclude Include="..\HiLib\EmptyCell.h" />
+    <ClInclude Include="..\HiLib\EventArgs.h" />
+    <ClInclude Include="..\HiLib\FileDragger.h" />
+    <ClInclude Include="..\HiLib\FilterCell.h" />
+    <ClInclude Include="..\HiLib\FindDlg.h" />
+    <ClInclude Include="..\HiLib\FindDlgResource.h" />
+    <ClInclude Include="..\HiLib\FontCell.h" />
+    <ClInclude Include="..\HiLib\FullCommand.h" />
+    <ClInclude Include="..\HiLib\FunctionMenuItem.h" />
+    <ClInclude Include="..\HiLib\GDIUIElement.h" />
+    <ClInclude Include="..\HiLib\GridView.h" />
+    <ClInclude Include="..\HiLib\GridViewProperty.h" />
+    <ClInclude Include="..\HiLib\GridViewResource.h" />
+    <ClInclude Include="..\HiLib\HeaderCell.h" />
+    <ClInclude Include="..\HiLib\IDoCommand.h" />
+    <ClInclude Include="..\HiLib\IKeyObserver.h" />
+    <ClInclude Include="..\HiLib\IMouseObserver.h" />
+    <ClInclude Include="..\HiLib\InplaceEdit.h" />
+    <ClInclude Include="..\HiLib\KonamiCommander.h" />
+    <ClInclude Include="..\HiLib\KonamiResource.h" />
+    <ClInclude Include="..\HiLib\MenuItem.h" />
+    <ClInclude Include="..\HiLib\MessageTimer.h" />
+    <ClInclude Include="..\HiLib\MyAutoUpdater.h" />
+    <ClInclude Include="..\HiLib\MyBrush.h" />
+    <ClInclude Include="..\HiLib\MyClipboard.h" />
+    <ClInclude Include="..\HiLib\MyColor.h" />
+    <ClInclude Include="..\HiLib\MyCom.h" />
+    <ClInclude Include="..\HiLib\MyDC.h" />
+    <ClInclude Include="..\HiLib\MyDlg.h" />
+    <ClInclude Include="..\HiLib\MyFile.h" />
+    <ClInclude Include="..\HiLib\MyFont.h" />
+    <ClInclude Include="..\HiLib\MyFriendSerializer.h" />
+    <ClInclude Include="..\HiLib\MyGdiObj.h" />
+    <ClInclude Include="..\HiLib\MyGdiplusHelper.h" />
+    <ClInclude Include="..\HiLib\MyInternet.h" />
+    <ClInclude Include="..\HiLib\MyMenu.h" />
+    <ClInclude Include="..\HiLib\MyMPL.h" />
+    <ClInclude Include="..\HiLib\MyPen.h" />
+    <ClInclude Include="..\HiLib\MyPoint.h" />
+    <ClInclude Include="..\HiLib\MyPrerocessor.h" />
+    <ClInclude Include="..\HiLib\MyRect.h" />
+    <ClInclude Include="..\HiLib\MyRgn.h" />
+    <ClInclude Include="..\HiLib\MySerializer.h" />
+    <ClInclude Include="..\HiLib\MySize.h" />
+    <ClInclude Include="..\HiLib\MyStopwatch.h" />
+    <ClInclude Include="..\HiLib\MyString.h" />
+    <ClInclude Include="..\HiLib\MyUniqueHandle.h" />
+    <ClInclude Include="..\HiLib\MyWin32.h" />
+    <ClInclude Include="..\HiLib\MyWnd.h" />
+    <ClInclude Include="..\HiLib\MyXMLSerializer.h" />
+    <ClInclude Include="..\HiLib\ObservableContainer.h" />
+    <ClInclude Include="..\HiLib\OGLAxis.h" />
+    <ClInclude Include="..\HiLib\OGLBitmapRenderer.h" />
+    <ClInclude Include="..\HiLib\OGLChart.h" />
+    <ClInclude Include="..\HiLib\OGLChartWnd.h" />
+    <ClInclude Include="..\HiLib\OGLEventArgs.h" />
+    <ClInclude Include="..\HiLib\OGLFont.h" />
+    <ClInclude Include="..\HiLib\OGLHelper.h" />
+    <ClInclude Include="..\HiLib\OGLRenderer.h" />
+    <ClInclude Include="..\HiLib\OGLSeries.h" />
+    <ClInclude Include="..\HiLib\OGLUIElement.h" />
+    <ClInclude Include="..\HiLib\OGLWindowRenderer.h" />
+    <ClInclude Include="..\HiLib\Operation.h" />
+    <ClInclude Include="..\HiLib\ParentColumnHeaderCell.h" />
+    <ClInclude Include="..\HiLib\ParentColumnHeaderHeaderCell.h" />
+    <ClInclude Include="..\HiLib\ParentColumnNameHeaderCell.h" />
+    <ClInclude Include="..\HiLib\ParentDefaultColumn.h" />
+    <ClInclude Include="..\HiLib\ParentHeaderCell.h" />
+    <ClInclude Include="..\HiLib\ParentMapColumn.h" />
+    <ClInclude Include="..\HiLib\ParentRowHeaderCell.h" />
+    <ClInclude Include="..\HiLib\ParentRowHeaderColumn.h" />
+    <ClInclude Include="..\HiLib\PropertyColumn.h" />
+    <ClInclude Include="..\HiLib\PropertyGridView.h" />
+    <ClInclude Include="..\HiLib\PropertyNameCell.h" />
+    <ClInclude Include="..\HiLib\PropertySerializer.h" />
+    <ClInclude Include="..\HiLib\PropertySheetCell.h" />
+    <ClInclude Include="..\HiLib\PropertyWnd.h" />
+    <ClInclude Include="..\HiLib\ResizeDlg.h" />
+    <ClInclude Include="..\HiLib\resource.h" />
+    <ClInclude Include="..\HiLib\Row.h" />
+    <ClInclude Include="..\HiLib\RowColumn.h" />
+    <ClInclude Include="..\HiLib\SEHException.h" />
+    <ClInclude Include="..\HiLib\Series.h" />
+    <ClInclude Include="..\HiLib\SeriesProperty.h" />
+    <ClInclude Include="..\HiLib\Sheet.h" />
+    <ClInclude Include="..\HiLib\SheetCell.h" />
+    <ClInclude Include="..\HiLib\SheetCellResource.h" />
+    <ClInclude Include="..\HiLib\SheetDictionary.h" />
+    <ClInclude Include="..\HiLib\SheetEnums.h" />
+    <ClInclude Include="..\HiLib\SheetEventArgs.h" />
+    <ClInclude Include="..\HiLib\SheetState.h" />
+    <ClInclude Include="..\HiLib\Sheet_WArchive.h" />
+    <ClInclude Include="..\HiLib\TextCell.h" />
+    <ClInclude Include="..\HiLib\Tracker.h" />
+    <ClInclude Include="..\HiLib\UIElement.h" />
+    <ClInclude Include="..\HiLib\UnDoReDoManager.h" />
+    <ClInclude Include="..\HiLib\UpdateDialog.h" />
+    <ClInclude Include="..\HiLib\UpdateResource.h" />
+    <ClInclude Include="..\HiLib\Vertex.h" />
+    <ClInclude Include="..\HiLib\XYZVWnd.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="XYZViewer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\HiLib\3DLineChart.cpp" />
+    <ClCompile Include="..\HiLib\Band.cpp" />
+    <ClCompile Include="..\HiLib\BoolCell.cpp" />
+    <ClCompile Include="..\HiLib\Cell.cpp" />
+    <ClCompile Include="..\HiLib\CellStringCommand.cpp" />
+    <ClCompile Include="..\HiLib\Chart.cpp" />
+    <ClCompile Include="..\HiLib\ChartElements.cpp" />
+    <ClCompile Include="..\HiLib\ChildIndexColumn.cpp" />
+    <ClCompile Include="..\HiLib\ChildRowHeaderColumn.cpp" />
+    <ClCompile Include="..\HiLib\ColorCell.cpp" />
+    <ClCompile Include="..\HiLib\Column.cpp" />
+    <ClCompile Include="..\HiLib\CompareCell.cpp" />
+    <ClCompile Include="..\HiLib\CompareColumn.cpp" />
+    <ClCompile Include="..\HiLib\Cursorer.cpp" />
+    <ClCompile Include="..\HiLib\Dragger.cpp" />
+    <ClCompile Include="..\HiLib\EmptyCell.cpp" />
+    <ClCompile Include="..\HiLib\FilterCell.cpp" />
+    <ClCompile Include="..\HiLib\FontCell.cpp" />
+    <ClCompile Include="..\HiLib\FullCommand.cpp" />
+    <ClCompile Include="..\HiLib\GDIUIElement.cpp" />
+    <ClCompile Include="..\HiLib\GridView.cpp" />
+    <ClCompile Include="..\HiLib\GridViewProperty.cpp" />
+    <ClCompile Include="..\HiLib\InplaceEdit.cpp" />
+    <ClCompile Include="..\HiLib\KonamiCommander.cpp" />
+    <ClCompile Include="..\HiLib\MyAutoUpdater.cpp" />
+    <ClCompile Include="..\HiLib\MyColor.cpp" />
+    <ClCompile Include="..\HiLib\MyDC.cpp" />
+    <ClCompile Include="..\HiLib\MyDlg.cpp" />
+    <ClCompile Include="..\HiLib\MyFile.cpp" />
+    <ClCompile Include="..\HiLib\MyGdiplusHelper.cpp" />
+    <ClCompile Include="..\HiLib\MyInternet.cpp" />
+    <ClCompile Include="..\HiLib\MyPen.cpp" />
+    <ClCompile Include="..\HiLib\MyString.cpp" />
+    <ClCompile Include="..\HiLib\MyWin32.cpp" />
+    <ClCompile Include="..\HiLib\MyWnd.cpp" />
+    <ClCompile Include="..\HiLib\MyXMLSerializer.cpp" />
+    <ClCompile Include="..\HiLib\OGLAxis.cpp" />
+    <ClCompile Include="..\HiLib\OGLBitmapRenderer.cpp" />
+    <ClCompile Include="..\HiLib\OGLChart.cpp" />
+    <ClCompile Include="..\HiLib\OGLChartWnd.cpp" />
+    <ClCompile Include="..\HiLib\OGLRenderer.cpp" />
+    <ClCompile Include="..\HiLib\OGLSeries.cpp" />
+    <ClCompile Include="..\HiLib\OGLUIElement.cpp" />
+    <ClCompile Include="..\HiLib\OGLWindowRenderer.cpp" />
+    <ClCompile Include="..\HiLib\ParentColumnHeaderCell.cpp" />
+    <ClCompile Include="..\HiLib\ParentColumnHeaderHeaderCell.cpp" />
+    <ClCompile Include="..\HiLib\ParentColumnNameHeaderCell.cpp" />
+    <ClCompile Include="..\HiLib\ParentDefaultColumn.cpp" />
+    <ClCompile Include="..\HiLib\ParentHeaderCell.cpp" />
+    <ClCompile Include="..\HiLib\ParentMapColumn.cpp" />
+    <ClCompile Include="..\HiLib\ParentRowHeaderCell.cpp" />
+    <ClCompile Include="..\HiLib\ParentRowHeaderColumn.cpp" />
+    <ClCompile Include="..\HiLib\PropertyColumn.cpp" />
+    <ClCompile Include="..\HiLib\PropertyGridView.cpp" />
+    <ClCompile Include="..\HiLib\Row.cpp" />
+    <ClCompile Include="..\HiLib\RowColumn.cpp" />
+    <ClCompile Include="..\HiLib\SEHException.cpp" />
+    <ClCompile Include="..\HiLib\Series.cpp" />
+    <ClCompile Include="..\HiLib\Sheet.cpp" />
+    <ClCompile Include="..\HiLib\SheetCell.cpp" />
+    <ClCompile Include="..\HiLib\SheetDictionary.cpp" />
+    <ClCompile Include="..\HiLib\SheetState.cpp" />
+    <ClCompile Include="..\HiLib\TextCell.cpp" />
+    <ClCompile Include="..\HiLib\Tracker.cpp" />
+    <ClCompile Include="..\HiLib\UIElement.cpp" />
+    <ClCompile Include="..\HiLib\UnDoReDoManager.cpp" />
+    <ClCompile Include="..\HiLib\XYZVWnd.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="XYZViewer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\HiLib\3DLineChart.rc" />
+    <ResourceCompile Include="..\HiLib\FindDlg.rc" />
+    <ResourceCompile Include="..\HiLib\Konami.rc" />
+    <ResourceCompile Include="..\HiLib\SheetCell.rc" />
+    <ResourceCompile Include="..\HiLib\Update.rc" />
+    <ResourceCompile Include="XYZViewer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\HiLib\3DLineChartOperation.bmp" />
+    <Image Include="small.ico" />
+    <Image Include="XYZViewer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\HiLib\Gradius.cur" />
+    <None Include="..\HiLib\msxml6.tlh" />
+    <None Include="..\HiLib\msxml6.tli" />
+    <None Include="..\Release\XYZViewer.exe" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

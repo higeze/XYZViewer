@@ -1,0 +1,4 @@
+#include "SheetDictionary.h"
+
+BOOST_CLASS_EXPORT_IMPLEMENT(Data);
+BOOST_CLASS_EXPORT_IMPLEMENT(ColumnData);
