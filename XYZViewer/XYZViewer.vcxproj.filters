@@ -679,9 +679,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Release\XYZViewer.exe">
-      <Filter>Release</Filter>
-    </None>
     <None Include="..\HiLib\msxml6.tli">
       <Filter>HiLib</Filter>
     </None>
@@ -690,6 +687,9 @@
     </None>
     <None Include="..\HiLib\Gradius.cur">
       <Filter>HiLib</Filter>
+    </None>
+    <None Include="..\Release\XYZViewer.exe">
+      <Filter>Release</Filter>
     </None>
   </ItemGroup>
 </Project>
